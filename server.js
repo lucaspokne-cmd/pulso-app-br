@@ -22,7 +22,7 @@ let databaseState = 'starting';
 let databaseError = null;
 
 function sessionSecret() {
-  return process.env.PULSO_SESSION_SECRET || process.env.MANUS_JWT_SECRET || '';
+  return process.env.PULSO_SESSION_SECRET || process.env.MANUS_JWT_SECRET || process.env.JWT_SECRET || '';
 }
 
 function databaseUrl() {
