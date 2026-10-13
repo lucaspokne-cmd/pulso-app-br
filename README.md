@@ -30,3 +30,7 @@ O projeto usa `Dockerfile` e o contrato de deploy do Webdev. O container escuta 
 ## Android
 
 A pasta `android/` contém um WebView para a versão online. Depois de a publicação HTTPS estar concluída, a constante `SERVER_URL` em `MainActivity.java` deve apontar para a URL pública final antes da compilação do APK.
+
+## Destaques iniciais
+
+Para o visitante não encontrar um feed vazio, o PULSE mostra dois trailers editoriais licenciados da Blender Foundation desde a primeira abertura: **Big Buck Bunny** e **Sintel**, sob CC BY 3.0. As fontes oficiais são `https://peach.blender.org/download/` e `https://durian.blender.org/`; a atribuição aparece na interface. Vídeos virais de terceiros só devem ser adicionados com autorização dos titulares.

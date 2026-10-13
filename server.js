@@ -16,6 +16,28 @@ const ALLOWED_VIDEO_TYPES = new Set(['video/mp4', 'video/webm', 'video/quicktime
 const ALLOWED_VIDEO_EXTENSIONS = new Set(['.mp4', '.webm', '.mov', '.m4v']);
 const scrypt = promisify(crypto.scrypt);
 const rate = new Map();
+const FEATURED_VIDEOS = [
+  {
+    id: 'featured-big-buck-bunny',
+    title: 'Big Buck Bunny · Blender Foundation (CC BY 3.0)',
+    username: 'PULSE Editorial',
+    url: 'https://media.w3.org/2010/05/bunny/trailer.mp4',
+    mime: 'video/mp4',
+    bytes: 11053871,
+    createdAt: '2026-01-01T00:00:00.000Z',
+    editorial: true
+  },
+  {
+    id: 'featured-sintel',
+    title: 'Sintel · Blender Foundation (CC BY 3.0)',
+    username: 'PULSE Editorial',
+    url: 'https://media.w3.org/2010/05/sintel/trailer.mp4',
+    mime: 'video/mp4',
+    bytes: 4372373,
+    createdAt: '2026-01-01T00:00:01.000Z',
+    editorial: true
+  }
+];
 
 let pool;
 let databaseState = 'starting';
@@ -305,7 +327,19 @@ async function feed(viewerId) {
     ORDER BY v.created_at DESC
     LIMIT 100
   `, [viewerId || '']);
-  return rows.map(publicVideo);
+  return FEATURED_VIDEOS.map(video => ({
+    id: video.id,
+    title: video.title,
+    username: video.username,
+    url: video.url,
+    mime: video.mime,
+    bytes: video.bytes,
+    createdAt: video.createdAt,
+    likes: 0,
+    liked: false,
+    comments: 0,
+    editorial: true
+  })).concat(rows.map(publicVideo));
 }
 
 const server = http.createServer(async (req, res) => {
