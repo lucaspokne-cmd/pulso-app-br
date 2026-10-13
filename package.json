@@ -1,8 +1,8 @@
 {
-  "name": "pulso-video-social",
+  "name": "pulse-video-social",
   "version": "1.0.0",
   "private": true,
-  "description": "PULSO: rede social de vídeos com dados e armazenamento duráveis.",
+  "description": "PULSE: rede social de vídeos com dados e armazenamento duráveis.",
   "scripts": {
     "start": "node server.js",
     "check": "node --check server.js && node --check public/app.js"

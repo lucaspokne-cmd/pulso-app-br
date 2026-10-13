@@ -1,13 +1,13 @@
-# PULSO para Android — projeto de embalagem
+# PULSE para Android — projeto de embalagem
 
 Este é um projeto-fonte Android Studio (WebView). **Não é um APK compilado**.
 
 ## Por que não há APK final aqui?
-A sessão de construção disponível não tem Android SDK/Gradle instalado, então não consigo compilar e verificar honestamente um APK neste ambiente. Além disso, o servidor do PULSO ainda não está hospedado com uma URL HTTPS pública. Sem isso, o app instalado não consegue acessar um feed compartilhado pela internet.
+A sessão de construção disponível não tem Android SDK/Gradle instalado, então não consigo compilar e verificar honestamente um APK neste ambiente. Além disso, o servidor do PULSE ainda não está hospedado com uma URL HTTPS pública. Sem isso, o app instalado não consegue acessar um feed compartilhado pela internet.
 
 ## Como finalizar
-1. Hospede o backend PULSO em uma infraestrutura compatível e configure HTTPS.
-2. Em `app/src/main/java/br/com/pulso/app/MainActivity.java`, substitua `https://COLOQUE-AQUI-A-URL-DO-PULSO` pela URL HTTPS real.
+1. Hospede o backend PULSE em uma infraestrutura compatível e configure HTTPS.
+2. Em `app/src/main/java/br/com/pulso/app/MainActivity.java`, substitua `https://pulso-tyernpt7.manus.space` pela URL HTTPS real.
 3. Abra esta pasta no Android Studio atualizado.
 4. Aguarde a sincronização do Gradle.
 5. Use **Build > Build Bundle(s) / APK(s) > Build APK(s)**.

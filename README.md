@@ -1,4 +1,4 @@
-# PULSO — vídeos em movimento
+# PULSE — vídeos em movimento
 
 Aplicação web de comunidade de vídeos com feed, contas, upload, curtidas e comentários.
 
@@ -7,7 +7,7 @@ Aplicação web de comunidade de vídeos com feed, contas, upload, curtidas e co
 - **Servidor:** Node.js 22 com HTTP nativo.
 - **Base de dados:** MySQL gerido pelo Webdev (`DATABASE_URL`), com tabelas criadas de forma idempotente no arranque.
 - **Ficheiros de vídeo:** armazenamento de objetos durável do Webdev, através de URLs pré-assinadas. O browser envia o vídeo diretamente para o storage; o container não guarda uploads no disco local.
-- **Sessões:** tokens HMAC assinados por `PULSO_SESSION_SECRET`, guardado como segredo protegido.
+- **Sessões:** tokens HMAC assinados por `PULSE_SESSION_SECRET`, guardado como segredo protegido.
 - **Limite de vídeo:** 100 MB; formatos MP4, WebM e MOV.
 - **Endpoint de saúde:** `GET /api/health`.
 
@@ -21,7 +21,7 @@ npm run check
 npm start
 ```
 
-O servidor requer `DATABASE_URL`, `MANUS_API_URL`, `MANUS_API_KEY` e `PULSO_SESSION_SECRET` no ambiente. Nunca coloque esses valores no Git ou no frontend.
+O servidor requer `DATABASE_URL`, `MANUS_API_URL`, `MANUS_API_KEY` e `PULSE_SESSION_SECRET` no ambiente. Nunca coloque esses valores no Git ou no frontend.
 
 ## Publicação
 

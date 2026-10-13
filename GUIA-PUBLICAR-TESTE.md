@@ -1,6 +1,6 @@
-# Operar e publicar o PULSO
+# Operar e publicar o PULSE
 
-O PULSO está preparado para publicação como aplicação web Node.js em container. A base de dados e os vídeos usam recursos geridos; não há dados de amostra no repositório.
+O PULSE está preparado para publicação como aplicação web Node.js em container. A base de dados e os vídeos usam recursos geridos; não há dados de amostra no repositório.
 
 ## Verificações antes da publicação
 
@@ -9,7 +9,7 @@ npm ci
 npm run check
 ```
 
-O ambiente de execução precisa fornecer `DATABASE_URL`, `MANUS_API_URL`, `MANUS_API_KEY` e `PULSO_SESSION_SECRET` através da configuração protegida do projeto. Os dois primeiros recursos são configurados pelo Webdev; o último é um segredo privado da aplicação.
+O ambiente de execução precisa fornecer `DATABASE_URL`, `MANUS_API_URL`, `MANUS_API_KEY` e `PULSE_SESSION_SECRET` através da configuração protegida do projeto. Os dois primeiros recursos são configurados pelo Webdev; o último é um segredo privado da aplicação.
 
 ## Verificação após publicação
 

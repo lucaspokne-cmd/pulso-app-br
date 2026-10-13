@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: pulso-prototipo
+    name: pulse-app
     runtime: docker
     plan: free
     dockerfilePath: ./Dockerfile

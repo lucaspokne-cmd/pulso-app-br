@@ -228,7 +228,7 @@ function storageAddress(key) {
 
 async function platformRequest(endpoint, options = {}) {
   const storage = storageConfig();
-  if (!storage.url || !storage.key) throw new Error('O armazenamento durável do PULSO não está configurado.');
+  if (!storage.url || !storage.key) throw new Error('O armazenamento durável do PULSE não está configurado.');
   const response = await fetch(`${storage.url}${endpoint}`, {
     ...options,
     headers: {
@@ -315,8 +315,8 @@ const server = http.createServer(async (req, res) => {
 
   try {
     if (req.method === 'GET' && route === '/api/health') {
-      if (databaseState === 'ready') return json(res, 200, { ok: true, service: 'PULSO', database: 'ready' });
-      return json(res, 503, { ok: false, service: 'PULSO', database: databaseState, error: databaseError ? 'Base de dados indisponível.' : 'A iniciar.' });
+      if (databaseState === 'ready') return json(res, 200, { ok: true, service: 'PULSE', database: 'ready' });
+      return json(res, 503, { ok: false, service: 'PULSE', database: databaseState, error: databaseError ? 'Base de dados indisponível.' : 'A iniciar.' });
     }
 
     if (databaseState !== 'ready') return json(res, 503, { error: 'O serviço ainda está a iniciar. Tente novamente em instantes.' });
@@ -454,7 +454,7 @@ server.listen(PORT, HOST, () => {
   initializeDatabase()
     .then(() => {
       databaseState = 'ready';
-      console.log(`PULSO pronto em http://${HOST}:${PORT} com base de dados gerida.`);
+      console.log(`PULSE pronto em http://${HOST}:${PORT} com base de dados gerida.`);
     })
     .catch(error => {
       databaseState = 'error';
